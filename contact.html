@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <aside class="navbar-left">
+            <a href="web_lowongan.html"><img src="assets/img/quality_restoration_20240926111905403.png" alt="Logo"></a>
+        </aside>
+        <div class="navbar-right">
+            <a href="web_lowongan.html" class="home">Home</a>
+            <a href="daftar_lowongan.html">Lowongan Pekerjaan</a>
+            <div class="dropdown">
+                <a href="#" class="about-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="teams.html"><i class="fas fa-users"></i> Our Team</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Hubungi Kami</h1>
+            <div class="contact-container">
+                <div class="form-container">
+                    <h2>Isi Formulir Kontak</h2>
+                    <form action="send-message.php" method="POST">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini" required></textarea>
+
+                        <button type="submit" class="submit-btn">Kirim Pesan</button>
+                    </form>
+                </div>
+
+                <div class="map-container">
+                    <h2>Lokasi Kami</h2>
+                    <!-- Embed Google Map with iframe -->
+                    <iframe src="https://maps.google.com/maps?q=YOUR_LOCATION_HERE&z=15&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <article class="footer-container">
+            <p>&copy; 2025 Wahyu Galang Ramadhan Rumampuk. All rights reserved.</p>
+        </article>
+    </footer>
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>

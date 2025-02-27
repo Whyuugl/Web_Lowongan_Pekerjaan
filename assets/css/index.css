@@ -1,0 +1,522 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 15px 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left img {
+    height: 30px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-right .lowongan-pekerjaan:hover {
+    color: blue;
+    opacity: 0.7;
+}
+
+.navbar-right .freelancer {
+    color: green;
+    opacity: 0.7;
+}
+
+.navbar-right .freelancer:hover {
+    opacity: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease, transform 0.2s;
+    font-size: 14px;
+}
+
+.dropdown-menu a i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.show {
+    display: block;
+}
+
+.navbar-right a.active {
+    background-color: rgba(0, 0, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+
+/* Ikon animasi di About Us */
+.about-toggle i.fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.about-toggle.active i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 90hv;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background-color: #f8f9fa;
+    gap: 50px;
+}
+
+/* Hero Teks */
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 span {
+    color: #00ADB5;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    color: #00ADB5;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.button-hire {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.button-hire button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn {
+    text-decoration: none;
+    background-color: transparent;
+    color: #00ADB5;
+    border: 2px solid #00ADB5;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+    background-color: #00ADB5;
+    color: #fff;
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-animated {
+    font-size: 28px;
+    color: #00ADB5;
+}
+
+.typing::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.partner-section {
+    padding: 80px 20px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.partner-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.partner-section h1 span {
+    color: #007bff; 
+}
+
+.partner-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+
+/* Company Slider */
+.slider-container {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(150px * 12 * 2);
+    animation: scroll 20s linear infinite;
+}
+
+.slider.reverse .slide-track {
+    animation: scroll-reverse 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.slide-track img {
+    width: 90px;
+    height: auto;
+    margin: 0 2em;
+    object-fit: contain;
+}
+
+/* Job Categories Section */
+.job-categories {
+    text-align: center;
+    padding: 90px 20px;
+    background-color: #f9f9f9;
+}
+
+.job-categories h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category {
+    background-color: #00ADB5;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.category:hover {
+    background-color: #008C9E;
+}
+
+/* Statistics Section */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ADB5;
+}
+
+.stat p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Call To Action (CTA) Section */
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #00ADB5;
+    color: #fff;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta .explore-btn, .cta .apply-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.cta .explore-btn {
+    background-color: #fff;
+    color: #00ADB5;
+    border: 2px solid #00ADB5;
+}
+
+.cta .apply-btn {
+    background-color: #FFCC00;
+    color: #333;
+}
+
+.cta .explore-btn:hover {
+    background-color: #e6e6e6;
+}
+
+.cta .apply-btn:hover {
+    background-color: #E6B800;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 50px;
+    }
+
+    .navbar-right a {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 8%;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .button-hire {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .navbar-left img {
+        height: 28px;
+    }
+
+    .navbar-right {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .navbar-right a {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text h2 {
+        font-size: 22px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-left img {
+        height: 24px;
+    }
+
+    .navbar-right {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .navbar-right a {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+    }
+
+    .hero-image img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .button-hire {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-hire button {
+        width: 100%;
+    }
+}

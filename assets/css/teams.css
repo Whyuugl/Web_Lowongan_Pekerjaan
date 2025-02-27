@@ -1,0 +1,219 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Styling untuk Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 15px 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left img {
+    height: 30px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-right .lowongan-pekerjaan:hover {
+    color: blue;
+    opacity: 0.7;
+}
+
+.navbar-right .freelancer {
+    color: green;
+    opacity: 0.7;
+}
+
+.navbar-right .freelancer:hover {
+    opacity: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease, transform 0.2s;
+    font-size: 14px;
+}
+
+.dropdown-menu a i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.show {
+    display: block;
+}
+
+.navbar-right a.active {
+    background-color: rgba(0, 0, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Styling untuk Our Team section */
+.team-section {
+    padding: 50px 100px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.team-member {
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-member h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.team-member p:nth-of-type(1) {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.team-member article {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 50px;
+    }
+
+    .navbar-right a {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .navbar-left img {
+        height: 28px;
+    }
+
+    .navbar-right {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .navbar-right a {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-left img {
+        height: 24px;
+    }
+
+    .navbar-right {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .navbar-right a {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

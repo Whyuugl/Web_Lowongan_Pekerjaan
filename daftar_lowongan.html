@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Lowongan Pekerjaan</title>
+    <link rel="stylesheet" href="assets/css/daftar_lowongan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <aside class="navbar-left">
+            <a href="web_lowongan.html"><img src="assets/img/quality_restoration_20240926111905403.png" alt="Logo"></a>
+        </aside>
+        <div class="navbar-right">
+            <a href="web_lowongan.html" class="home">Home</a>
+            <a href="daftar_lowongan.html" class="lowongan-active">Lowongan Pekerjaan</a>
+            <div class="dropdown">
+                <a href="#" class="about-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="teams.html"><i class="fas fa-users"></i> Our Team</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="lowongan-section">
+            <h2>Lowongan Pekerjaan</h2>
+            <p>Jelajahi berbagai lowongan pekerjaan dari perusahaan terpercaya dan raih kesempatan untuk berkembang.
+                Temukan karier impianmu bersama kami!</p>
+            <div class="search-bar">
+                <input type="text" id="search-job" placeholder="Cari pekerjaan...">
+                <button id="search-btn"><i class="fas fa-search"></i> Cari</button>
+                <button id="clear-search-btn" style="display: none;">Clear Search</button>
+            </div>
+            <div class="filters">
+                <select id="filter-category">
+                    <option value="">Semua Klasifikasi</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Design">Design</option>
+                    <option value="Backend Development">Backend Development</option>
+                    <option value="Data Science">Data Science</option>
+                </select>
+            
+                <select id="filter-location">
+                    <option value="">Semua Daerah</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bandung">Bandung</option>
+                </select>
+            
+                <select id="filter-type">
+                    <option value="">Semua Jenis Pekerjaan</option>
+                    <option value="Freelance">Freelance</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                </select>
+            </div>            
+            <div class="job-list">
+                <article class="job-item">
+                    <h3>Web Developer</h3>
+                    <p class="job-description">Membangun dan mengelola website dengan menggunakan teknologi web terbaru.</p>
+                    <div class="job-details">
+                        <span class="job-category">Web Development</span>
+                        <span class="job-location">Remote</span>
+                        <span class="job-type">Freelance</span>
+                    </div>
+                    <button class="apply-btn">Lamar</button>
+                </article>
+                
+                <article class="job-item">
+                    <h3>UI/UX Designer</h3>
+                    <p class="job-description">Merancang pengalaman pengguna yang intuitif dan menarik.</p>
+                    <div class="job-details">
+                        <span class="job-category">Design</span>
+                        <span class="job-location">Jakarta</span>
+                        <span class="job-type">Full-time</span>
+                    </div>
+                    <button class="apply-btn">Lamar</button>
+                </article>
+                <article class="job-item">
+                    <h3>Backend Developer</h3>
+                    <p class="job-description">Membangun server dan database yang handal untuk aplikasi web.</p>
+                    <div class="job-details">
+                        <span class="job-category">Backend Development</span>
+                        <span class="job-location">Bandung</span>
+                        <span class="job-type">Part-time</span>
+                    </div>
+                    <button class="apply-btn">Lamar</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <article class="footer-container">
+            <p>&copy; 2025 Wahyu Galang Ramadhan Rumampuk. All rights reserved.</p>
+        </article>
+    </footer>
+    <script src="assets/js/daftar_lowongan.js"></script>
+</body>
+
+</html>
